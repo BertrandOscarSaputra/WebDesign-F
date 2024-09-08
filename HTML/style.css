@@ -5,3 +5,7 @@ body {
 p,h1{
     color: white;
 }
+
+hr {
+    background-color: beige;
+}
