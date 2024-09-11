@@ -8,4 +8,6 @@ p,h1{
 
 hr {
     background-color: beige;
+    border-color: whitesmoke;
+    width: 250px;
 }
