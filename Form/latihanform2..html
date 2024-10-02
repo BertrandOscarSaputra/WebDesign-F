@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Login</h1>
+    <form>
+        <table border="1">
+            <tr>
+                <td><label for="firstname"> Name</label></td>
+                <td><input type="text" name="firstname" id="firstname"></td>
+                <td><label for="lastname"> Name</td></label>
+                <td><input type="text" name="lastname" id="lastname"></td>
+            </tr>
+            <tr>
+                <td><label for="number"> Mobile Number </label> </td>
+                <td><input type="number" name="mobile" id="mobile"></td>
+                <td><label for="email"> Email Address </label> </td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="password"> Password </label> </td>
+                <td><input type="password" name="password" id="password"></td>
+                <td><label for="birthday"> Birthday </label> </td>
+                <td><input type="date" name="birthday" id="birthday"></td>
+            </tr>
+            <tr>
+                <td><label for="prodi"> Program of Study </label> </td>
+                <td>
+                    <select name="prodi" id="prodi">
+                        <option value="IF">Informatika</option>
+                        <option value="SI">Sistem Informasi</option>
+                        <option value="TI">Teknologi Informasi</option>
+                    </select>
+                </td>
+                <td><label for="gender">Gender</label></td>
+                <td><input type="radio" name="gender" id="gender">Male
+                <input type="radio" name="gender" id="gender">Female</td>
+            </tr>
+            <tr>
+                <td colspan="4"><label for="hobby">Hobby</label><br>
+                <input type="checkbox" name="hobby" id="hobby" value="Programming">Programming
+                <input type="checkbox" name="hobby" id="hobby" value="Database">Database
+                <input type="checkbox" name="hobby" id="hobby" value="Networking">Networking
+                <input type="checkbox" name="hobby" id="hobby" value="Security">Security
+                <input type="checkbox" name="hobby" id="hobby" value="Multimedia">Multimedia</td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
