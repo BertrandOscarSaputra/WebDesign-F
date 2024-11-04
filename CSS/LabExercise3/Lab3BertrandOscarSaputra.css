@@ -1,0 +1,86 @@
+html {
+   font-family: Roboto; 
+}
+
+
+.card {
+    width: 300px;
+    height: 400px;
+    padding:20px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 200px;
+    box-shadow: 4px 4px 4px 4px #b16f6f;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+.small{
+    font-size: small;
+    color: #c57c7c;
+    margin-top: 0;
+}
+
+#username ,#password {
+    margin-bottom: 20px;
+    width: 275px;
+    padding: 8px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border-color: #e1adad;
+}
+
+.divider{
+    color: #c57c7c;
+}
+
+.card a {
+    text-decoration: none;
+    color: #1e81b0;
+    font-size: 15px;
+}
+
+.submit {
+    background-color: #1e81b0;
+    color: white;  
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    border: none;
+}
+
+.submit:hover {
+    background-color: #19485e;
+    cursor: pointer;
+}
+
+.divider {
+    text-align: center;
+}
+ .social {
+    background-color: white;
+    border-radius: 20px;
+    width: 300px;
+    height: 40px;
+    color: #5c4b4b;
+ }
+
+ .social:hover {
+    cursor: pointer;
+ }
+
+footer {
+    margin: 30px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 100px;
+}
+
+ footer a {
+    text-decoration: none;
+    color: #7eaaf1;
+ }
