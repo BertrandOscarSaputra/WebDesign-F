@@ -10,7 +10,7 @@ html {
     border-radius: 10px;
     margin: auto;
     margin-top: 200px;
-    box-shadow: 4px 4px 4px 4px #b16f6f;
+    box-shadow: 4px 4px 4px 4px #e3baba;
 }
 
 h1 {
@@ -26,20 +26,73 @@ h1 {
 #username ,#password {
     margin-bottom: 20px;
     width: 275px;
-    padding: 8px;
+    padding: 10px;
     padding-left: 15px;
     border-radius: 5px;
     border-color: #e1adad;
+    border: 2px solid #c57c7c;
 }
 
-.divider{
+#username:hover ,#password:hover {
+    border-color: #443c3c;
+}
+
+.divider {
+    text-align: center;
+    color: #888888;
+    font-size: 0.9em;
+    margin: 1em 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.divider hr {
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0;
+}
+
+#left {
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    margin: 10px
+}
+
+#right {
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
+    margin: 10px
+}
+
+#ro {
     color: #c57c7c;
+}
+
+.divider span {
+    vertical-align: middle;
+    color: #888888;
+    font-size: 0.9em;
+    margin: 0 0.5em;
 }
 
 .card a {
     text-decoration: none;
     color: #1e81b0;
     font-size: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: #cce0f1;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .submit {
@@ -58,9 +111,7 @@ h1 {
     cursor: pointer;
 }
 
-.divider {
-    text-align: center;
-}
+
  .social {
     background-color: white;
     border-radius: 20px;
@@ -71,6 +122,7 @@ h1 {
 
  .social:hover {
     cursor: pointer;
+    color: #0d0a0a;
  }
 
 footer {
