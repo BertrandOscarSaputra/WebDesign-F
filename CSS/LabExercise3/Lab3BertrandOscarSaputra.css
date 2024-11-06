@@ -51,7 +51,6 @@ h1 {
     width: 40%;
     vertical-align: middle;
     border: none;
-    height: 1px;
     background-color: #ccc;
     margin: 0;
 }
@@ -68,10 +67,6 @@ h1 {
     width: 40%;
     vertical-align: middle;
     margin: 10px
-}
-
-#ro {
-    color: #c57c7c;
 }
 
 .divider span {
@@ -123,6 +118,7 @@ a:hover {
  .social:hover {
     cursor: pointer;
     color: #0d0a0a;
+    border: solid 2px #0d0a0a;
  }
 
 footer {
@@ -134,5 +130,5 @@ footer {
 
  footer a {
     text-decoration: none;
-    color: #7eaaf1;
+    color: #7ea8eb;
  }

@@ -1,0 +1,39 @@
+#one {
+    grid-area: header;
+}
+
+#two {
+    grid-area: ads;
+}
+
+#three {
+    grid-area: main;
+}
+
+#four {
+    grid-area: links;
+}
+
+#five {
+    grid-area: footer;
+}
+
+#layout {
+    display: grid;
+    grid-template-rows: [header-start] 100px [content-start] 1fr [footer-start] 100px;
+    grid-template-columns: [ads] 200px [main-content] 1fr [links] 200px;
+    grid-template-areas: 
+    "header  header  header"
+    "ads     main    links"
+    "footer  footer  footer";
+}
+
+h1, footer {
+    text-align: center;
+    padding: 15px;
+}
+
+/* #laytout {
+    grid: [header-start] "header header header"
+} */
+
