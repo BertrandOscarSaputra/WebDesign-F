@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "icon header header"
+    "sidenav main main"
+    "sidenav footer footer";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.menu-icon {
+  grid-area: icon;
+  background-color: #2e3b55;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #648da7;
+  color: white;
+}
+
+.sidenav {
+  grid-area: sidenav;
+  background-color: #2e3b55;
+  color: white;
+  padding: 15px;
+  min-width: 150px;
+}
+
+.main {
+  grid-area: main;
+  padding: 15px;
+  background-color: #91d4d8;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 15px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  
+  background-color: #e3e5e7;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #788695;
+  height: 50vh;
+}
+
+.main-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.overviewcard {
+  background-color: #a4b7db;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card {
+  background-color: #82bef6;
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+.card:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 500px;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5e9ca0;
+  color: white;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+li {
+  list-style-type: none;
+}
+
+.sidenav__list-item {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.sidenav__list-item:hover {
+  color: #dddddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "icon"
+      "sidenav"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+    height: auto;
+  }
+
+  .header,
+  .footer {
+    text-align: center;
+  }
+
+  .sidenav {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sidenav__list-item {
+    margin: 15px 10px;
+  }
+
+  .main-overview {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .card:first-child {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: auto;
+  }
+}
