@@ -28,9 +28,27 @@ body {
   display: inline-flex;
   width: 100%;
   background-color: #EAFFF2;
-  padding: 10px;
   align-items: center;
   border-radius: 3px;
+}
+
+.in_search {
+  border: none;
+  background-color: #EAFFF2;
+  width: 100%;
+  font-size: 1em;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.in_search:hover {
+  background-color: #e4e7ea;
+}
+
+.in_search:focus {
+  background-color: #EAFFF2;
+  outline: none;
+  border: none;
 }
 
 .header__search:hover {
@@ -88,13 +106,15 @@ body {
   gap: 10px;
 }
 
+
+
 .overviewcard {
   background-color: #60bacdca;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
   color: white;
-  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 }
 
@@ -102,8 +122,7 @@ body {
   background-color: #5f9ea3;
   cursor: pointer;
   transform: scale(1.05);
-  animation: card 0.5s;
-  animation-timing-function: ease-in;
+ 
 }
 
 .main-cards {
@@ -147,7 +166,7 @@ li {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 
@@ -166,21 +185,27 @@ li {
 
 .sidenav__list-item:hover {
   color: #dddddd;
-  transform: scale(2);
+  transform: scale(1.05);
   transition: transform 0.2s ease-out;
+}
+
+@keyframes card {
+  0% {background-color: #69c2d4ca;}
+  100% {background-color: #2e8394;}
 }
 
 .card:hover {
   background-color: #539ba0;
   cursor: pointer;
-  transform: translateY(-5px) scale(1.03); /* Adds a subtle lift effect */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+  transform: translateY(-1px) scale(1.02); 
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+  animation: card 0.5s forwards;
 }
 
 .card:first-child:hover {
   background-color: #539ba0;
   cursor: pointer;
-  transform: translateY(-5px) scale(1.03);
+  transform: translateY(-5px) scale(1.01);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -239,10 +264,9 @@ li {
   }
 
   .overviewcard:hover{
-    background-color: #4c6466;
+    background-color: #5cbac2;
     cursor: pointer;
     transform: scale(1.02);
-    animation: card 0.5s;
-    animation-timing-function: ease-in;
+    
   }
 }
