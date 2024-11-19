@@ -21,7 +21,27 @@ body {
 
 .menu-icon {
   grid-area: icon;
-  background-color: #2e3b55;
+  background-color: #3C5450;
+}
+
+.header__search {
+  display: inline-flex;
+  width: 100%;
+  background-color: #EAFFF2;
+  padding: 10px;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.header__search:hover {
+  background-color: #d4dfdf;
+  cursor:text;
+}
+
+.header__avatar {
+  display: flex;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 .header {
@@ -30,13 +50,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: #648da7;
-  color: white;
+  background-color: #805A40;
 }
 
 .sidenav {
   grid-area: sidenav;
-  background-color: #2e3b55;
+  background-color: #3C5450;
   color: white;
   padding: 15px;
   min-width: 150px;
@@ -45,7 +64,7 @@ body {
 .main {
   grid-area: main;
   padding: 15px;
-  background-color: #91d4d8;
+  background-color: #DED190;
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 15px;
@@ -54,12 +73,13 @@ body {
 .main-header {
   display: flex;
   justify-content: space-between;
-  
-  background-color: #e3e5e7;
+  border-radius: 3px;
+  background-color: #fbfbfb;
   padding: 15px;
   font-size: 0.9em;
   color: #788695;
   height: 50vh;
+  overflow: auto;
 }
 
 .main-overview {
@@ -69,11 +89,21 @@ body {
 }
 
 .overviewcard {
-  background-color: #a4b7db;
+  background-color: #60bacdca;
   padding: 20px;
   text-align: center;
   border-radius: 5px;
   color: white;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.overviewcard:hover{
+  background-color: #5f9ea3;
+  cursor: pointer;
+  transform: scale(1.05);
+  animation: card 0.5s;
+  animation-timing-function: ease-in;
 }
 
 .main-cards {
@@ -83,11 +113,12 @@ body {
 }
 
 .card {
-  background-color: #82bef6;
+  background-color: #4B9FB0;
   padding: 30px;
   border-radius: 5px;
   text-align: center;
   color: white;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
 }
 
 .card:first-child {
@@ -101,7 +132,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #5e9ca0;
+  background-color: #805A40;
   color: white;
   padding: 15px;
   font-size: 0.9em;
@@ -109,19 +140,51 @@ body {
 
 li {
   list-style-type: none;
+  padding: 10px;
 }
 
-.sidenav__list-item {
-  margin: 15px 0;
+.header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+
+.header img:hover {
   cursor: pointer;
+  transform: scale(1.25);
+}
+
+
+.sidenav__list-item {
+  margin: 45px 0;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
 }
 
 .sidenav__list-item:hover {
   color: #dddddd;
+  transform: scale(2);
+  transition: transform 0.2s ease-out;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+.card:hover {
+  background-color: #539ba0;
+  cursor: pointer;
+  transform: translateY(-5px) scale(1.03); /* Adds a subtle lift effect */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+}
+
+.card:first-child:hover {
+  background-color: #539ba0;
+  cursor: pointer;
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
   .grid-container {
     grid-template-areas:
       "header"
@@ -145,7 +208,9 @@ li {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
+
   }
+
 
   .sidenav__list-item {
     margin: 15px 10px;
@@ -160,10 +225,24 @@ li {
     grid-template-columns: 1fr;
     gap: 5px;
   }
-
+  
   .card:first-child {
     grid-column: span 1;
     grid-row: span 1;
-    height: auto;
+    height: 300px;
+  }
+
+  .card {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 150px;
+  }
+
+  .overviewcard:hover{
+    background-color: #4c6466;
+    cursor: pointer;
+    transform: scale(1.02);
+    animation: card 0.5s;
+    animation-timing-function: ease-in;
   }
 }
